@@ -1,0 +1,16 @@
+minikube-linux-amd64
+
+# Analytics Service
+analytics-service/venv/
+
+# API gateway service
+
+# Auth service
+
+# Frontend service
+
+# Notifcation service
+
+# Task Service
+
+# Terraform
