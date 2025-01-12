@@ -1,10 +1,10 @@
-package com.gateway.api_getway_service;
+package com.service.api_gateway_service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApiGetwayServiceApplicationTests {
+class ApiGatewayServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

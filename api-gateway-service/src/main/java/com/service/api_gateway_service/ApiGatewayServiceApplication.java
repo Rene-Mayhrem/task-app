@@ -1,13 +1,13 @@
-package com.gateway.api_getway_service;
+package com.service.api_gateway_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ApiGetwayServiceApplication {
+public class ApiGatewayServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ApiGetwayServiceApplication.class, args);
+		SpringApplication.run(ApiGatewayServiceApplication.class, args);
 	}
 
 }

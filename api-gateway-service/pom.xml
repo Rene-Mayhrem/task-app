@@ -8,10 +8,10 @@
 		<version>3.4.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.gateway</groupId>
-	<artifactId>api-getway-service</artifactId>
+	<groupId>com.service</groupId>
+	<artifactId>api-gateway-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>api-getway-service</name>
+	<name>api-gateway-service</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
