@@ -1,6 +1,10 @@
-FROM openjdk:11-jre-slim
+FROM maven:3.8.1-openjdk-11-slim AS build 
 
-VOLUME /tmp 
-COPY target/auth-service-0.0.1-SNAPSHOT.jar auth-service.jar 
+WORKDIR /app
+COPY pom.xml . 
+COPY /src ./src 
+RUN mvn clean package  
 
-ENTRYPOINT [ "java" , "-jar", "/auth-service.jar" ]
+FROM openjdk:11-jre-slim 
+COPY --from=build /app/target/auth-service-0.0.1-SNAPSHOT.jar auth-service.jar
+ENTRYPOINT [ "java", "-jar", "auth-service.jar" ]
