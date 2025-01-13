@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: analytics-service
+  namespace: mayhrem-task-app
 spec:
   replicas: 2
   selector:
@@ -14,9 +15,11 @@ spec:
     spec:
       containers:
       - name: analytics-service
-        image: your-docker-repo/analytics-service:latest
+        image: mayhrem/analytics-service:latest
         ports:
         - containerPort: 8080
+      imagePullSecrets: 
+      - name: task-key
 ---
 apiVersion: v1
 kind: Service
@@ -29,3 +32,5 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 8080
+      nodePort: 30079
+  type: NodePort

@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: notification-service
+  namespace: mayhrem-task-app
 spec:
   replicas: 2
   selector:
@@ -14,7 +15,7 @@ spec:
     spec:
       containers:
       - name: notification-service
-        image: your-docker-repo/notification-service:latest
+        image: mayhrem/notification-service:latest
         ports:
         - containerPort: 8080
 ---
@@ -29,3 +30,5 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 8080
+      nodePort: 30084
+  type: NodePort
