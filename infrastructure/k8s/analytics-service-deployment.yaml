@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: analytics-service
-        image: mayhrem/analytics-service:1.0.0
+        image: mayhrem/analytics-service:3.0.0
         ports:
         - containerPort: 8080
       imagePullSecrets: 
