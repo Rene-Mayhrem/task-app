@@ -9,22 +9,51 @@ Welcome to the `task-app` repository! This project is designed to help you learn
 
 ```txt
 task-app/
-├── frontend/
-│   └── (React project files)
-├── backend/
-│   ├── task-service/
-│   │   └── (Java Spring Boot project files)
-│   └── analytics-service/
-│       └── (Python Flask or FastAPI project files)
-├── database/
-│   └── (Database schema and migration files)
-├── infrastructure/
-│   └── (Terraform scripts)
-├── docs/
-│   └── PROMPT.md
-└── .github/
-    └── workflows/
-        └── (CI/CD pipeline files) 
+|── .github/
+|   |── workflows/
+|       |── (CI/CD pipeline files) 
+├── analytics-service
+│   ├── app
+│   │   ├── __init__.py
+│   │   └── main.py
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   └── venv
+├── api-gateway-service
+│   ├── Dockerfile
+│   ├── pom.xml
+│   ├── src
+├── auth-service
+│   ├── Dockerfile
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── src
+│   └── tsconfig.json
+├── infrastructure
+│   ├── k8s
+│   │   ├── analytics-service-deployment.yaml
+│   │   ├── api-gateway-service-deployment.yaml
+│   │   ├── auth-service-deployment.yaml
+│   │   ├── frontend-service-deployment.yaml
+│   │   ├── namespace.yaml
+│   │   ├── notification-service-deployment.yaml
+│   │   └── task-service-deployment.yaml
+│   └── terraform
+├── minikube-linux-amd64
+├── notification-service
+│   ├── Dockerfile
+│   ├── pom.xml
+│   ├── src
+├── script
+│   ├── apply-deployment.sh
+│   ├── build-all.sh
+│   ├── create-secret-key.sh
+│   └── delete-deployment.sh
+└── task-service
+    ├── Dockerfile
+    ├── pom.xml
+    ├── src
+├── README.md
 ```
 
 ## Learning Objectives
