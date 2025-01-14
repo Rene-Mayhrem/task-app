@@ -7,4 +7,5 @@ RUN mvn clean package
 
 FROM openjdk:17-slim
 COPY --from=build /app/target/task-service-0.0.1-SNAPSHOT.jar task-service.jar 
+RUN apt-get update && apt-get install -y iputils-ping curl && rm -rf /var/lib/apt/lists/*
 ENTRYPOINT [ "java", "-jar", "/task-service.jar" ]
