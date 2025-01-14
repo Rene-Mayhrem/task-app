@@ -4,6 +4,10 @@ import numpy as np
 
 app = FastAPI()
 
+@app.get("/health")
+def health_check ():
+    return {"status": "healthy"}
+
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
