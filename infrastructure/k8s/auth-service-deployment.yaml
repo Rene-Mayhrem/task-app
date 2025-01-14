@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: auth-service
-        image: mayhrem/auth-service:latest
+        image: mayhrem/auth-service:1.0.0
         ports:
         - containerPort: 8080
 ---

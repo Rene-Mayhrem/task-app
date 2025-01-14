@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: api-gateway
-        image: mayhrem/api-gateway-service:latest
+        image: mayhrem/api-gateway-service:1.0.0
         ports:
         - containerPort: 8080
 ---

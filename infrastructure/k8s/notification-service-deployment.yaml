@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: notification-service
-        image: mayhrem/notification-service:latest
+        image: mayhrem/notification-service:1.0.0
         ports:
         - containerPort: 8080
 ---

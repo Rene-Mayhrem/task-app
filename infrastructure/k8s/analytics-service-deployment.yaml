@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: analytics-service
-        image: mayhrem/analytics-service:latest
+        image: mayhrem/analytics-service:1.0.0
         ports:
         - containerPort: 8080
       imagePullSecrets: 
@@ -25,6 +25,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: analytics-service
+  namespace: mayhrem-task-app
 spec:
   selector:
     app: analytics-service
