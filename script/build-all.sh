@@ -5,7 +5,9 @@ set -o allexport
 source .env
 set -o allexport
 
-VERSION="1.0.0"
+VERSION="3.0.0"
+
+echo "$ROOT"
 
 #? Build Auth Service
 echo "Building auth service"
